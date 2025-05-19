@@ -271,12 +271,13 @@ else:
     ].nunique()
     conversion_rate = (conversion_by_IP / total_visitors) * 100
 
-    tab1, tab2, tab3, tab4 = st.tabs(
+    tab1, tab2, tab3, tab4, tab5 = st.tabs(
         [
             "💰 Sales Overview",
             "🏆 Sales Performance",
             "🌐 Traffic Analytics",
             "📊 Descriptive Statistics",
+            "Raw Data"
         ]
     )
 
@@ -1334,6 +1335,8 @@ else:
     #         )
 
     #         st.plotly_chart(fig_volume)
-
+    with tab5:
+        st.header("Data Set")
+        st.dataframe(filtered_df.head(500))
     with st.sidebar:
         st.button("Log out", on_click=st.logout)
