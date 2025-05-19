@@ -1,0 +1,10 @@
+[server]
+runOnSave=true
+maxUploadSize = 1000
+
+[theme]
+primaryColor="#003f5c"
+backgroundColor="#DADADA"
+secondaryBackgroundColor="#4CB5F5"
+textColor="#31333F"
+font="sans serif"

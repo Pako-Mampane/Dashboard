@@ -1,0 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+html, body, [class*="css"] {
+    font-family: 'Bebas Neue', sans-serif; 
+    font-size: 18px;
+    font-weight: 300;
+    color: #091747;
+}
