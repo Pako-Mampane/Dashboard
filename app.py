@@ -907,7 +907,7 @@ else:
                 deal_steps = [
                     {"range": [0, 70], "color": "red"},
                     {"range": [70, 120], "color": "darkorange"},
-                    {"range": [150, deal_max_val], "color": "green"},
+                    {"range": [120, deal_max_val], "color": "green"},
                 ]
             else:
                 deal_max_val = 600
