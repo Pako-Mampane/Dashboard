@@ -887,7 +887,9 @@ else:
                     color="Product",
                 )
                 fig_funnel.update_layout(
-                    height=225, margin=dict(t=50, r=20, l=20), paper_bgcolor="white"
+                    height=225, margin=dict(t=50, r=10, l=10), paper_bgcolor="white",
+                    showlegend=False,
+                    legend=dict(font=dict(size=10)),
                 )
                 st.plotly_chart(fig_funnel, use_container_width=True)
             else:
