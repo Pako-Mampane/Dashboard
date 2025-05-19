@@ -1,10 +1,5 @@
-from re import X
-from turtle import color, hideturtle, width
 import calendar
 from calendar import month_name
-from matplotlib import legend
-from traitlets import default
-from api import CSV_FILE_PATH
 import streamlit as st  # type: ignore
 import pandas as pd
 import plotly.express as px  # type: ignore
