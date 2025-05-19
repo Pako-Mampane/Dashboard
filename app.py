@@ -174,7 +174,6 @@ else:
     file = st.sidebar.file_uploader("Choose a dataset")
     if file is not None:
         df = load_data(file)
-        st.success("✅ File uploaded successfully!")
     else:
         st.warning("Please upload a dataset to continue")
         st.stop()
