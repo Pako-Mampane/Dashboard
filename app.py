@@ -1,10 +1,5 @@
-from re import X
-from turtle import color, hideturtle, width
 import calendar
 from calendar import month_name
-from matplotlib import legend
-from traitlets import default
-from api import CSV_FILE_PATH
 import streamlit as st  # type: ignore
 import pandas as pd
 import plotly.express as px  # type: ignore
@@ -277,12 +272,13 @@ else:
     ].nunique()
     conversion_rate = (conversion_by_IP / total_visitors) * 100
 
-    tab1, tab2, tab3, tab4 = st.tabs(
+    tab1, tab2, tab3, tab4,tab5 = st.tabs(
         [
             "💰 Sales Overview",
             "🏆 Sales Performance",
             "🌐 Traffic Analytics",
             "📊 Descriptive Statistics",
+            "Raw Dataset",
         ]
     )
 
@@ -831,7 +827,7 @@ else:
                 )
                 fig_sbr.update_traces(textinfo="percent+label")
                 fig_sbr.update_layout(
-                    margin=dict(t=50, b=20, r=20, l=20),
+                    margin=dict(t=30, b=10, r=20, l=20),
                     width=100,
                     height=225,
                     paper_bgcolor="white",
@@ -891,9 +887,12 @@ else:
                     x="Count",
                     title=f"Sales Funnel: {selected_agent}",
                     color="Product",
+                    text='Product'
                 )
                 fig_funnel.update_layout(
-                    height=225, margin=dict(t=50, r=20, l=20), paper_bgcolor="white"
+                    height=225, margin=dict(t=50, r=10, l=10), paper_bgcolor="white",
+                    showlegend=False,
+                    legend=dict(font=dict(size=10)),
                 )
                 st.plotly_chart(fig_funnel, use_container_width=True)
             else:
@@ -1177,6 +1176,9 @@ else:
 
         st.plotly_chart(fig_requests, use_container_width=True)
 
+    with tab5:
+        st.header("Data Set")
+        st.dataframe(filtered_df.head(500))
     # with tab4:
     #     filtered_df = filtered_df.dropna(subset=["Sales Agent", "Revenue", "Product"])
     #     selected_agent = st.radio(
