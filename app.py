@@ -113,7 +113,7 @@ st.markdown(
 )
 
 USER_CREDENTIALS = {
-    "manager": {"password": "manager123"},
+    "manager": {"password": "p@k0123"},
     "member": {"password": "member123"},
 }
 if "logged_in" not in st.session_state:
