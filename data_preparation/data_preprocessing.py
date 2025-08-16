@@ -17,7 +17,7 @@ def load_and_filter_data():
             f"""
             <div style="padding-top:0;" id="header">
             <div id='title'>AI Solutions</div>
-            <div id="greetings">Hello, {st.session_state.username}!</div>
+            <div id="greetings">Hello!</div>
             </div>""",
             unsafe_allow_html=True,
         )
