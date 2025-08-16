@@ -4,3 +4,7 @@
 __pycache__/
 
 data/*
+
+models/*
+ignored/*
+streamlit/secrets.toml
